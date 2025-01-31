@@ -18,7 +18,7 @@ app.get('/list', async (req, res) => {
     ]
     res.send({ data: array, code: 200 })
 });
-app.post('/Node_pabbly_zoho', async (req, res) => {
+app.post('/addData', async (req, res) => {
     console.log(req.body, "body-----")
     const data = req.body
     res.send({ data: data, code: 200 })
