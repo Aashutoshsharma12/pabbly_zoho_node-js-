@@ -56,7 +56,12 @@ const redirect_uri = 'https://pabbly-zoho-node-js.onrender.com/callback';
 
 app.get("/callback", async (req, res) => {
     const authCode = req.query.code;
+    console.log(authCode, "auth++++++++++++++++++++++++++++++")
     try {
+        console.log(client_id,
+            client_secret,
+            redirect_uri,
+            authCode, "--------------------------------")
         const response = await axios.post("https://accounts.zoho.com/oauth/v2/token", null, {
             params: {
                 client_id: client_id,
