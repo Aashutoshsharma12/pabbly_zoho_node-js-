@@ -55,8 +55,8 @@ const client_secret = 'd6859d752f9c36b4491d7bcee8c231e1a5185a2287';
 const redirect_uri = 'https://pabbly-zoho-node-js.onrender.com/callback';
 
 app.get("/callback", async (req, res) => {
-    const authCode = req.query.code;
-    console.log(authCode, "auth++++++++++++++++++++++++++++++")
+    const authCode = req.query;
+    console.log(authCode, "auth++++++++++++++++++++++++++++++", req.body)
     try {
         console.log(client_id,
             client_secret,
